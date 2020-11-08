@@ -292,7 +292,7 @@ a {
     }
 }
 .material-card.mc-active .mc-description {
-    line-height: 0;
+    line-height: 1;
     top: 50px;
     padding-top: 5.6em;
     opacity: 1;
