@@ -334,8 +334,8 @@ a {
 }
 .material-card.Primary h2:before {
     border-top-color: transparent;
-    border-right-color: #ff6f00;
-    border-bottom-color: #ff6f00;
+    border-right-color: #6c757d;
+    border-bottom-color: #6c757d;
     border-left-color: transparent;
 }
 .material-card.Primary.mc-active h2:before {
@@ -345,8 +345,8 @@ a {
     border-left-color: transparent;
 }
 .material-card.Primary.mc-active h2:after {
-    border-top-color: #ff6f00;
-    border-right-color: #ff6f00;
+    border-top-color: #6c757d;
+    border-right-color: #6c757d;
     border-bottom-color: transparent;
     border-left-color: transparent;
 }
@@ -354,13 +354,13 @@ a {
     background-color: #bd5d38;
 }
 .material-card.Primary .mc-btn-action:hover {
-    background-color: #ff6f00;
+    background-color: #6c757d;
 }
 .material-card.Primary .mc-footer h4 {
-    color: #ff6f00;
+    color: #6c757d;
 }
 .material-card.Primary .mc-footer a {
-    background-color: #ff6f00;
+    background-color: #6c757d;
 }
 .material-card.Primary.mc-active .mc-content {
     background-color: #fff3e0;
