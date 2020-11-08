@@ -27,7 +27,7 @@
     text-decoration: none; */
     /* top: 200px; */
 } */
-.fa-fw {
+/*.fa-fw {
     width: 1.28571429em;
     text-align: center;
 }
@@ -70,7 +70,7 @@ a {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg);
     }
-}
+}*/
 .material-card {
     position: relative;
     height: 0;
