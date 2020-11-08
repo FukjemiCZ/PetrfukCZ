@@ -8,7 +8,7 @@
     -o-transition: all 0.8s;
     /* transition: all 0.8s; */
 }
-.material-card .mc-footer a {
+/* .material-card .mc-footer a {
     display: block;
     float: left;
     position: relative;
@@ -21,7 +21,7 @@
     line-height: 52px;
     text-decoration: none; */
     /* top: 200px; */
-}
+} */
 .fa-fw {
     width: 1.28571429em;
     text-align: center;
