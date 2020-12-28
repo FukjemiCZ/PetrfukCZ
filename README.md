@@ -2,6 +2,16 @@
 
 ## Bucketlist
 
+- [ ] 80 km pod 24h
+- [ ] 100km pod 24h
+- [ ] Po břehu Nežárky
+- [ ] Po břehu Vltavy
+- [ ] Solo skok z letadla
+- [ ] Obejít ČR
+- [ ] Přejít Slovinsko
+- [ ] Přespat na hradě
+- [ ] Přespat na zřícenině
+
 ## Dogtrekking
 
 | Datum | Závod | Pořadí | Výsledný čas | Trať | Odstup na prvního | Tempo |
