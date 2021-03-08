@@ -1,7 +1,7 @@
 # PetrfukCZ
 
 - [ ] Darkmode - Default
-- [ ] Add public certificate
+- [ ] Add public certificate for SSH
 
 ## Bucketlist
 
