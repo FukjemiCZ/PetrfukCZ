@@ -1,8 +1,7 @@
 # PetrfukCZ
 
-## Darkmode - Default
-
-## Add public certificate
+- [ ] Darkmode - Default
+- [ ] Add public certificate
 
 ## Bucketlist
 
