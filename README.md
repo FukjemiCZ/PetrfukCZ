@@ -1,5 +1,9 @@
 # PetrfukCZ
 
+## Darkmode - Default
+
+## Add public certificate
+
 ## Bucketlist
 
 - [ ] 80 km pod 24h
