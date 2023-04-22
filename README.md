@@ -5,7 +5,7 @@
 
 ## Bucketlist
 
-- [ ] 80 km pod 24h
+- [X] 80 km pod 24h
 - [ ] 100km pod 24h
 - [ ] Po břehu Nežárky
 - [ ] Po břehu Vltavy
@@ -13,7 +13,7 @@
 - [ ] Obejít ČR
 - [ ] Přejít Slovinsko
 - [ ] Přespat na hradě
-- [ ] Přespat na zřícenině
+- [X] Přespat na zřícenině
 
 ## Dogtrekking
 
