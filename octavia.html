@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodej Octavia 1U5 combi 74kw/1.9 AXR</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* Změněna barva pozadí z prvního stylu */
+        color: #333;
+    }
+
+    header {
+        text-align: center;
+        padding: 30px;
+        background-color: #333;
+        color: white;
+    }
+
+    h1 {
+        color: #fff;
+    }
+    h2 {
+        color: #333;
+    }
+
+    .gallery, #gallery {
+        display: flex; /* Použito flexbox pro galerii, která je ve druhém stylu grid */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px; /* Přidáno pro oddělení prvků v galerii */
+        padding: 20px;
+    }
+
+    .gallery img, .gallery-item img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        border-radius: 10px 10px 0 0; /* Přidáno zaokrouhlení rohů pro obrázky */
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .gallery img:hover, .gallery-item:hover {
+        transform: scale(1.1);
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal img {
+        width: 80%;
+        height: auto;
+        max-width: 800px;
+        cursor: pointer;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .prev {
+        left: 15px;
+    }
+
+    .next {
+        right: 15px;
+    }
+
+    .description, .service-history, .issues, .accidents {
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+    }
+
+    .service-history {
+        margin: 15px;
+         /* Přidáno pro první blok (100% šířky) */
+    }
+
+    .issues, .accidents {
+        min-width: 45%;
+        display: inline-block;
+    }
+    @media screen and (min-width: 767px) {
+        .issues, .accidents {
+            width: 45%;
+        }
+      }
+    @media screen and (max-width: 767px) {
+        .issues, .accidents {
+            align-items: center;
+            min-width: 80%;
+        }
+      } 
+    .tabulka {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        
+    }
+
+    #myTable tr{
+        border-bottom: 1px solid #ddd;
+    }
+
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Prodej Octavia 1U5 combi 74kw/1.9 AXR</h1>
+    </header>
+    <div class="issues">
+        <h2>Specifikace vozidla:</h2>
+        <ul>
+            <li>✅ Původ z Belgie 2010</li>
+            <li>✅ První majitel v ČR (2019)</li>
+            <li>✅ Servisní knížka do 15.6.2015</li>
+            <li>✅ Záznamy na webu od 4.7.2019</li>
+            <li>✅ ABS</li>
+            <li>✅ Bluetooth autoradio</li>
+            <li>✅ NAFTA</li>
+        </ul>
+        <h2>Cena: [uveděte cenu]</h2>
+    </div>
+    <div class="issues">
+        <h2>Specifikace:</h2>
+        <ul>
+            <li>Najeto: ~335 000 km</li>
+            <li>Technická kontrola platná do: 6.6.2025</li>
+            <li>Výkon motoru: 74 kw</li>
+            <li>Objem motoru: 1896 cm<sup>3</sup></li>
+            <li>Varianta: SEAXRX01</li>
+            <li>Typ: AXR</li>
+            <li>Spotřeba: 5,4 L / 100 km</li>
+            <li>Provozní hmotnost: 1340 kg</li>
+            <li>Barva: [Počet ujetých kilometrů]</li>
+        </ul>
+    </div>
+    <div class="gallery">
+        <!-- Zde vlož své obrázky -->
+        <img src="img/obrazek1.png" alt="Fotografie 1" onclick="openModal('img/obrazek1.png', 0)">
+        <img src="img/obrazek2.png" alt="Fotografie 2" onclick="openModal('img/obrazek2.png', 1)">
+        <img src="img/obrazek3.png" alt="Fotografie 3" onclick="openModal('img/obrazek3.png', 2)">
+        <img src="img/obrazek4.png" alt="Fotografie 4" onclick="openModal('img/obrazek4.png', 3)">
+        <!-- ... další obrázky ... -->
+    </div>
+
+    <div class="service-history">
+        <h2>Servisní historie</h2>
+        <table id="myTable" class="tabulka">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Datum</th>
+                    <th onclick="sortTable(1)">Servis</th>
+                    <th onclick="sortTable(2)">Úkon</th>
+                    <th onclick="sortTable(3)">Km</th>
+                    <th onclick="sortTable(4)">Poznámka</th>
+                </tr>
+            </thead>
+            <tr><td>4.7.2019</td><td>AR Partner s.r.o.</td><td>Emise</td><td>325877</td><td>Bez závad</td></tr>
+            <tr><td>4.7.2019</td><td>AR Partner s.r.o.</td><td>STK</td><td>325877</td><td>Bez závad</td></tr>
+            <tr><td>24.7.2019</td><td>AR Servis s.r.o.</td><td>Servis</td><td>283363</td><td>Geometrie</td></tr>
+            <tr><td>8.8.2019</td><td>AR Servis s.r.o.</td><td>Servis</td><td>283450</td><td>Výmena brzdové kapaliny</td></tr>
+            <tr><td>8.8.2019</td><td>AR Servis s.r.o.</td><td>Servis</td><td>283450</td><td>Dezinfekce klimatizace</td></tr>
+            <tr><td>8.8.2019</td><td>AR Servis s.r.o.</td><td>Servis</td><td>283450</td><td>Výměna oleje VW 50400/50700</td></tr>
+            <tr><td>8.8.2019</td><td>AR Servis s.r.o.</td><td>Servis</td><td>283450</td><td>Výměna vodního čerpadla</td></tr>
+            <tr><td>8.8.2019</td><td>AR Servis s.r.o.</td><td>Servis</td><td>283450</td><td>Výměna rozvodového řemene</td></tr>
+            <tr><td>24.7.2020</td><td>IČ: 74332597</td><td>Servis</td><td>300011</td><td>Kabinový filtr, vzduchový filtr, Olejový filtr, Olej 5W40</td></tr>
+            <tr><td>23.2.2021</td><td>Osobně</td><td>Servis</td><td>~307000</td><td>Výměna předních destiček</td></tr>
+            <tr><td>29.6.2021</td><td>Přerost a Švorc - auto s.r.o.</td><td>Servis</td><td>310833</td><td>Olejový filtr, Olej OE5W30 505</td></tr>
+            <tr><td>2.7.2021</td><td>AR Partner s.r.o.</td><td>Emise</td><td></td><td>Bez závad</td></tr>
+            <tr><td>2.7.2021</td><td>AR Partner s.r.o.</td><td>STK</td><td></td><td>Bez závad</td></tr>
+            <tr><td>24.9.2021</td><td>Autosklo team s.r.o.</td><td>Servis</td><td></td><td>Výměna čelního skla</td></tr>
+            <tr><td>16.5.2022</td><td>AR Servis s.r.o.</td><td>Servis</td><td>317748</td><td>Výmena lůžek spodních ramen na přední nápravě</td></tr>
+            <tr><td>16.5.2022</td><td>AR Servis s.r.o.</td><td>Servis</td><td>317748</td><td>Geometrie</td></tr>
+            <tr><td>16.5.2022</td><td>AR Servis s.r.o.</td><td>Servis</td><td>317748</td><td>Výměna uložení předních tlumičů</td></tr>
+            <tr><td>16.5.2022</td><td>AR Servis s.r.o.</td><td>Servis</td><td>317748</td><td>Výměna dorazů zadní nápravy</td></tr>
+            <tr><td>16.5.2022</td><td>AR Servis s.r.o.</td><td>Servis</td><td>317748</td><td>LP poloosa dodání pojistek</td></tr>
+            <tr><td>14.10.2022</td><td>Autosalon klokočka centrum a.s.</td><td>Servis</td><td>321015</td><td>Hřídelový kloub</td></tr>
+            <tr><td>14.10.2022</td><td>Autosalon klokočka centrum a.s.</td><td>Servis</td><td>321015</td><td>Geometrie</td></tr>
+            <tr><td>7.6.2023</td><td>AR Partner s.r.o.</td><td>Emise</td><td>325877</td><td>Bez závad</td></tr>
+            <tr><td>7.6.2023</td><td>AR Partner s.r.o.</td><td>STK</td><td>325877</td><td>Bez závad</td></tr>
+            <tr><td>7.6.2023</td><td>AR Servis s.r.o.</td><td>Servis</td><td>325869</td><td>Inspekční servis, Filtr olejový, filtr prachovy a pylovy, filtr pyl klima, Olej VW50501</td></tr>
+            <tr><td>5.8.2023</td><td>Osobně</td><td>Servis</td><td></td><td>Výměna předních LP dveří</td></tr>
+            <tr><td>Chystá se</td><td></td><td>Evidenčka</td><td>?????</td><td>Evidenční kontrola</td></tr>
+        </table>
+    </div>
+
+    
+
+    <div class="accidents">
+        <h2>Škodní události</h2>
+        <table>
+            <tr class="border"><td rowspan="2">24.9.2021 </td><td> Prasklina na předním skle </td></tr><tr><td> Výměna Autosklo team</td></tr>
+            <tr class="border"><td rowspan="4">1.10.2022 </td><td> Náraz na levé přední kolo zničený levý přední blatník</td></tr><tr><td> Během nárazu bylo auto zaparkováno v klidu na sídlišti, vyník nezjištěn</td></tr><tr><td> Proběhla kontrola v Autosalon Klokočka</td></tr><tr><td> Geometrie, oprava uložení kol. Blatník jsem neopravoval</td></tr>
+            <tr class="border"><td rowspan="4">27.7.2023 </td><td> Pokus o vykradení automobilu, řešeno s PČR - vyník nezjištěn</td></tr><tr><td> Poškrábané levé přední dveře, odvrtaný zámek</td></tr><tr><td> Výměna za dveře z vrakáče ve shodné barvě</td></tr><tr><td> Zaslepení zámku, neřešil jsem sestavení nového</td></tr>
+        </table>
+    </div>
+    <div class="issues">
+        <h2>Zjištěné závady</h2>
+        <table>
+            <tr><td>Vyrezlé zadní brzdové kotouče</td></tr>
+            <tr><td>Nefunkční zadní stěrač</td></tr>
+            <tr><td>Chybí zátka potrubí klimatizace</td></tr>
+            <tr><td>Opotřebovaný akumulátor</td></tr>
+            <tr><td>Nefunkční světlo zpátečky</td></tr>
+            <tr><td>Levý přední blatník promáčklina</td></tr>
+        </table>
+    </div>
+    <div class="gallery">
+        <!-- Zde vlož své obrázky -->
+        <img src="img/obrazek5.png" alt="Fotografie 5" onclick="openModal('img/obrazek5.png', 4)">
+        <img src="img/obrazek6.png" alt="Fotografie 6" onclick="openModal('img/obrazek6.png', 5)">
+        <img src="img/obrazek7.png" alt="Fotografie 7" onclick="openModal('img/obrazek7.png', 6)">
+        <!-- ... další obrázky ... -->
+    </div>
+    
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+        <img id="modalImg" class="modal-content">
+        <span class="next" onclick="plusSlides(1)">&#10095;</span>
+    </div>
+    
+    <script>
+        var slideIndex = 0;
+        var modalImages = [];
+    
+        function openModal(imgSrc, index) {
+            modalImages = document.querySelectorAll('.gallery img');
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('myModal').style.display = 'flex';
+            slideIndex = index;
+    
+            // Přidává posluchače klávesnice při otevření modálního okna
+            document.addEventListener('keydown', handleKeyPress);
+        }
+    
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+    
+            // Odebírá posluchače klávesnice při zavření modálního okna
+            document.removeEventListener('keydown', handleKeyPress);
+        }
+    
+        function handleKeyPress(event) {
+            // Funkce pro ovládání galerie pomocí klávesnicových šipek
+            switch (event.key) {
+                case 'ArrowLeft':
+                    plusSlides(-1);
+                    break;
+                case 'ArrowRight':
+                    plusSlides(1);
+                    break;
+                case 'Escape':
+                    closeModal();
+                    break;
+            }
+        }
+    
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+            if (n >= modalImages.length) {
+                slideIndex = 0;
+            }
+            if (n < 0) {
+                slideIndex = modalImages.length - 1;
+            }
+            document.getElementById('modalImg').src = modalImages[slideIndex].src;
+        }
+    
+        function findIndex(imgSrc) {
+            for (var i = 0; i < modalImages.length; i++) {
+                if (modalImages[i].src === imgSrc) {
+                    return i;
+                }
+            }
+            return 0;
+        }
+        
+    </script>
+    
+    </body>
+    </html>
+    
+</body>
+</html>
