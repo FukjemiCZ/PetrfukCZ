@@ -1,0 +1,50 @@
+@media print {
+    /* Zobrazí kontaktní informace, pracovní zkušenosti a vzdělání */
+    #about, #experience, #education {
+        display: block;
+        visibility: visible;
+        position: relative;
+    }
+
+    /* Skryje navigační menu a další sekce */
+    nav, #sideNav, #interests, #Dogtrekking, #books {
+        display: none;
+    }
+
+    /* Stylování pro tisknutelné kontaktní informace */
+    .contact-info {
+        margin: 20px;
+        font-size: 18px;
+    }
+
+    .contact-info .social-icons {
+        margin-top: 10px;
+    }
+
+    .contact-info .qrcode {
+        margin-top: 0px;
+    }
+
+    .contact-info .qrcode-item {
+        display: inline-block;
+        margin: 0px;
+        text-align: center;
+    }
+
+    .contact-info .qrcode-label {
+        margin-top: 0px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .contact-info .qrcode img {
+        display: inline-block;
+        margin: 0px;
+    }
+}
+
+@media screen {
+    .qrcode {
+        display: none;
+    }
+}
