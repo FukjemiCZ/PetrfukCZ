@@ -48,6 +48,7 @@
                 </li>
                 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#fuckups">Fuck-ups</a></li> -->
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Vzdělání</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="printButton">Print</a></li>
                 <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#books">To si přečti</a></li>-->
             </ul>
         </div>
@@ -69,6 +70,13 @@
                     <span class="text-primary">81,5 km </span><span>· 15:21:00</span>
                 </div>
                 <p class="lead mb-5"></p>
+                <div class="qrcode">
+                    <div class="qrcode-item">
+                        <img src="assets/img/petrfuk-qrcode.png"
+                            alt="PetrFuk.cz QR Code" width="100">
+                        <p class="qrcode-label">PetrFuk.cz</p>
+                    </div>
+                </div>
                 <div class="social-icons">
                     <a class="social-icon" target="_newtab" href="https://github.com/FukjemiCZ"><i
                             class="fab fa-github"></i></a>
@@ -77,14 +85,8 @@
                     <a class="social-icon" target="_newtab" href="https://www.instagram.com/petr_fukjemi"><i
                             class="fab fa-instagram"></i></a>
                 </div>
-                <div class="qrcode">
-                    <div class="qrcode-item">
-                        <img src="assets/img/petrfuk-qrcode.png"
-                            alt="PetrFuk.cz QR Code" width="100">
-                        <p class="qrcode-label">PetrFuk.cz</p>
-                    </div>
-                </div>
             </div>
+            
         </section>
         <hr class="m-0" />
         <!-- Interests
@@ -716,6 +718,14 @@
                 });
             });
         </script>
+        <!-- Include jsPDF from CDN -->
+
+<script>
+document.getElementById('printButton').addEventListener('click', function() {
+    window.print();
+});
+</script>
+
 </body>
 
 </html>
