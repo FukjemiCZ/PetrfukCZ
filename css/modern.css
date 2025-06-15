@@ -1,0 +1,45 @@
+/* Modern Dark Theme */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #64ffda;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-color);
+}
+
+.navbar {
+  background-color: #1f1f1f;
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  color: var(--text-color) !important;
+}
+
+.resume-section {
+  padding: 60px 0;
+}
+
+.dog-cards-container .dog-card {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  margin-bottom: 16px;
+}
+
+.dog-cards-container .dog-card h4 {
+  color: var(--accent-color);
+}
