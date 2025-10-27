@@ -27,6 +27,11 @@
     <link href="css/dog-cards.css" rel="stylesheet" />
     <!-- Print theme CSS -->
     <link href="css/print.css" rel="stylesheet" />
+    <style>
+      /* drobný styling pro e-mail v hlavičce obsahu */
+      .email-link { display:inline-flex; align-items:center; gap:.5rem; word-break: break-word; }
+      .email-link i { font-size: 0.95em; }
+    </style>
 </head>
 
 <body id="page-top">
@@ -64,13 +69,23 @@
                     Petr
                     <span class="text-primary">Fuk</span>
                 </h1>
-                <div class="subheading mb-5">
+                <div class="subheading mb-3">
                     Dogtrekkař a <span class="text-primary">DevOps</span>ák
                 </div>
-                <div class="subheading mb-5">
+                <div class="subheading mb-4">
                     personal best ·
                     <span class="text-primary">80 km </span><span>· 14:54:00</span>
                 </div>
+
+                <!-- >>> Dynamický e-mail – vložený přímo pod osobními údaji <<< -->
+                <div class="subheading mb-5">
+                    <a id="dynamicEmail" class="email-link" href="mailto:mail@fukjemi.cz" aria-label="Napsat e-mail">
+                        <i class="fas fa-envelope"></i>
+                        <span class="email-text">mail@fukjemi.cz</span>
+                    </a>
+                </div>
+                <!-- ^^^ Dynamický e-mail ^^^ -->
+
                 <p class="lead mb-5"></p>
                 <div class="qrcode">
                     <div class="qrcode-item">
@@ -166,7 +181,7 @@
                         <div class="info">Čas: 16:28:00</div>
                         <div class="info">29.3.2024</div>
                     </div>
-                    
+
                     <div class="dog-card">
                         <h4>Montnegre - dogtrekking</h4>
                         <div class="distance">60 km</div>
@@ -768,6 +783,7 @@
             gtag('js', new Date());
 
             gtag('config', 'UA-176810645-1');
+
             $(function () {
                 $('.material-card > .mc-btn-action').click(function () {
                     var card = $(this).parent('.material-card');
@@ -800,12 +816,33 @@
         </script>
         <!-- Include jsPDF from CDN -->
 
-<script>
-document.getElementById('printButton').addEventListener('click', function() {
-    window.print();
-});
-</script>
+        <!-- Tisk -->
+        <script>
+            document.getElementById('printButton').addEventListener('click', function() {
+                window.print();
+            });
+        </script>
 
+        <!-- Dynamický e-mail podle domény -->
+        <script>
+          (function () {
+            var host = (window.location.hostname || "").toLowerCase().replace(/^www\./, "");
+            var domain = "fukjemi.cz";
+            if (host === "petrfuk.cz" || host.endsWith(".petrfuk.cz") ||
+                host === "fukpetr.cz" || host.endsWith(".fukpetr.cz")) {
+              domain = "petrfuk.cz";
+            }
+            var email = "mail@" + domain;
+            var link = document.getElementById("dynamicEmail");
+            var span = link ? link.querySelector(".email-text") : null;
+            if (link) {
+              link.href = "mailto:" + email;
+              link.setAttribute("aria-label", "Napsat e-mail na " + email);
+            }
+            if (span) span.textContent = email;
+          })();
+        </script>
+    </div>
 </body>
 
 </html>
