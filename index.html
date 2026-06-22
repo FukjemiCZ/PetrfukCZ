@@ -39,6 +39,57 @@
         .email-link i {
             font-size: 0.95em;
         }
+
+        /* Minimalistický toggle pro 1000 Miles */
+        #thousand-miles-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: block !important;
+        }
+
+        .toggle-button {
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 12px !important;
+            background-color: #2c3e50 !important;
+            border: none !important;
+            cursor: pointer !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+            padding: 8px !important;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .toggle-button img {
+            max-width: 100% !important;
+            max-height: 100% !important;
+        }
+
+        /* Tmavé pozadí za logem v sekci */
+        .logo-dark-box {
+            width: 140px;
+            height: 140px;
+            background-color: #2c3e50;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .logo-dark-box img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     </style>
 </head>
 
@@ -69,6 +120,13 @@
             </ul>
         </div>
     </nav>
+    <!-- 1000 Miles Toggle Button -->
+    <div id="thousand-miles-toggle">
+        <a href="https://1000.fukjemi.cz/" target="blank" class="toggle-button" title="1000 Miles - 5.7.2026">
+            <img src="assets/img/logo-color.svg" alt="1000 Miles">
+        </a>
+    </div>
+
     <!-- Page Content-->
     <div class="container-fluid p-0">
         <!-- About-->
@@ -112,6 +170,26 @@
                 </div>
             </div>
 
+        </section>
+        <hr class="m-0" />
+        <!-- Major Challenges-->
+        <section class="resume-section" id="major-challenges">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Velké akce</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">1000 Miles</h3>
+                        <div class="subheading mb-3">Extrémní závod přes Českou republiku a Slovensko</div>
+                        <p>Non-stop ultra vzdálenostní závod pro všechny pohybující se vlastní silou – cyklisty, běžce, chodce, koloběžkáře a další. Absolutní výzva překonávající fyzické i mentální limity.</p>
+                        <p><strong>Datum:</strong> 5. července 2026</p>
+                    </div>
+                    <div class="flex-shrink-0 text-center" style="margin-left: 2rem;">
+                        <a href="https://1000.fukjemi.cz/" target="blank" class="logo-dark-box">
+                            <img src="assets/img/logo-color.svg" alt="1000 Miles">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
         <hr class="m-0" />
         <!-- Interests
@@ -1000,6 +1078,27 @@
                     link.setAttribute("aria-label", "Napsat e-mail na " + email);
                 }
                 if (span) span.textContent = email;
+            })();
+        </script>
+
+        <!-- 1000 Miles Toggle & Section Script -->
+        <script>
+            (function () {
+                var toggle = document.getElementById("thousand-miles-toggle");
+                var section = document.getElementById("major-challenges");
+                var revealDate = new Date(2026, 6, 1); // 1. července 2026 (měsíc je 0-indexed)
+                var today = new Date();
+
+                // V development módu (localhost) se toggle vždy zobrazí
+                var isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+                // Toggle je vždy viditelný
+                toggle.style.display = 'block';
+
+                // Sekce "Velké akce" se zobrazí jen od 1.7.2026
+                if (today < revealDate) {
+                    section.style.display = 'none';
+                }
             })();
         </script>
     </div>
